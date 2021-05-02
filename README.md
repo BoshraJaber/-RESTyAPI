@@ -2,11 +2,12 @@
 an API testing tool that can be run in any browser, allowing a user to easily interact with APIs in a familiar interface.
 
 ## LAB - 26: Component Based UI
-* Deployment: [RESTy App]()
+* Deployment: [RESTy App](https://pensive-jennings-ff26f3.netlify.app/)
 * Author: Boshra Jaber
 * Setup: 
   - To create a react app: `npx create-react-app app-name`
   - another way by adding npm flag: `npx create-react-app app-name --use-npm`
+  - Remove the .git file so you don't have nested repo: `rm -rf .git`
   - To start the app: `npm start`
   - To use Sacc for styling: `npm i node-sass`
 
@@ -15,5 +16,4 @@ an API testing tool that can be run in any browser, allowing a user to easily in
 2. choose the rest method.
 3. Click on GO! to see the results.
 ## UML
-![Created with diagrams](react-app/src/Screenshot%202021-05-03%20021514.png)
-
+![Created with diagrams](src/Screenshot%202021-05-03%20021514.png)
