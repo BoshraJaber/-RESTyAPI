@@ -13,25 +13,28 @@ class Form extends React.Component {
   // Handel Click:
   formSubmit =async (e)=>{
     e.preventDefault();
-    const url = e.target.url.value;
-    const method = e.target.method.value;
+    const url = e.target.url.value || 'https://official-joke-api.appspot.com/random_joke';
+    const method = e.target.method.value || 'get';
     this.setState({ url, method });
     localStorage.setItem("Method History", JSON.stringify(method));
     localStorage.setItem("URL History", JSON.stringify(url));
-    // document.getElementById("form").reset();
+    
     // Getting the data from the URL:
     try{
     const data=  await superagent.get(url)
     // const data = await raw.json();
-    // console.log(data.body);
+    // console.log('JSON data ------------------',data);
     // let {headers, body} = data
 let counter = data.body.count || ' There is no counter ';
 // console.log('Counter', counter)
-    this.props.handler(data, counter)
+let results = [];
+results.push(data.headers, data.body)
+    this.props.handler(results, counter)
     }catch(error){
         console.error(error)
     }
-    e.target.reset();
+    // document.getElementById("form").reset();
+    // e.target.reset();
   }
   
   handleURL = (e)=>{
@@ -51,7 +54,7 @@ let counter = data.body.count || ' There is no counter ';
           <button type="submit"> Go!</button>
           <br/>
           <div className="radioBtn">
-          <input type="radio" id="get" name="method" value="get" required />
+          <input type="radio" id="get" name="method" value="get" checked />
           <label htmlFor="get">GET</label>
           <input type="radio" id="post" name="method" value="post" />
           <label htmlFor="post">POST</label>

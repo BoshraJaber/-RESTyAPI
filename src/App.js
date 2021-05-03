@@ -21,8 +21,8 @@ export default class App extends Component {
     
     // let {headers, body} =results;
     this.setState({ resultsArray: results, Count: Count});
-    // console.log('Hellllllo',headers);
-    // console.log('booodyyyyyyyyyyyyyyyyyy',body)
+    // console.log('Hellllllo',results);
+    // console.log('booodyyyyyyyyyyyyyyyyyy',typeof results)
   };
   render() {
     return (
@@ -30,7 +30,7 @@ export default class App extends Component {
         <Header />
         <Form  handler={this.handleForm} />
         {/* <People people={this.state.people} /> */}
-        <Results  count={this.state.Count} results={this.state.resultsArray} />
+        <Results  count={this.state.Count} headers={this.state.resultsArray[0]} results={this.state.resultsArray[1]}/>
         <Footer />
       </>
     );

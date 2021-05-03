@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactJson from 'react-json-view';
 
 function Results(props) {
     return (
@@ -7,23 +7,28 @@ function Results(props) {
         <div>
            Counts:  {props.count}
            <br/>
-           Header: {props.results}
+        <ReactJson
+        src={props.headers}
+        name="Headers"
+        // theme = 'summerfruit:inverted'
+        iconStyle={'square'}
+        collapsed={false}
+        enableClipboard={false}
+        displayDataTypes={false}
+        displayObjectSize={true}
+      />
 
- { console.log(props.results)}
+<ReactJson
+        src={props.results}
+        name="Response"
+        iconStyle={'square'}
+        collapsed={false}
+        enableClipboard={false}
+        displayDataTypes={false}
+        displayObjectSize={true}
+      />
         </div>
-
         </>
-    //   <ul>
-    //     {
-    //       props.Results.map((person,index)=>{
-    //         return(
-    //           <li key={person.name}>
-    //             <a href={person.url}>{person.name}</a>
-    //           </li>
-    //         )
-    //       })
-    //     }
-    //   </ul>
     )
   }
   
