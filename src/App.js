@@ -7,6 +7,7 @@ import Form from'./Form.js';
 import Header from './Header';
 import Footer from './Footer';
 import Results from './Results';
+import './Results.scss';
 
 export default class App extends Component {
   constructor(props) {

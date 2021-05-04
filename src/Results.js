@@ -4,7 +4,7 @@ import ReactJson from 'react-json-view';
 function Results(props) {
     return (
         <>
-        <div>
+        <div id="json">
            Counts:  {props.count}
            <br/>
         <ReactJson
