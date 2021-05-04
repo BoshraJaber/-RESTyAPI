@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
+import { If, Then, Else } from 'react-if';
 
 function Results(props) {
     return (
         <>
+          <If condition={!props.count}>
+          <Then>
+        <div></div>
+        </Then>
+        <Else>
         <div id="json">
            Counts:  {props.count}
            <br/>
@@ -28,15 +34,14 @@ function Results(props) {
         displayObjectSize={true}
       />
         </div>
+        </Else>
+          </If>
+       
         </>
     )
   }
   
-  export default Results;
-
-
-
-
+export default Results;
 
 
 

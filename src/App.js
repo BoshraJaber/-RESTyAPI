@@ -7,6 +7,7 @@ import Form from'./Form.js';
 import Header from './Header';
 import Footer from './Footer';
 import Results from './Results';
+import History from './History'
 import './Results.scss';
 
 export default class App extends Component {
@@ -30,8 +31,10 @@ export default class App extends Component {
       <>
         <Header />
         <Form  handler={this.handleForm} />
-        {/* <People people={this.state.people} /> */}
+        <section id="body">
+        <History />
         <Results  count={this.state.Count} headers={this.state.resultsArray[0]} results={this.state.resultsArray[1]}/>
+        </section>
         <Footer />
       </>
     );
