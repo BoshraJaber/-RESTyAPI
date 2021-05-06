@@ -31,11 +31,6 @@ displayHistory.map(entry =>{
 </section>
 </>
 )}
-// return (
-//     <ul>
-//       {pokemons.map((pokemon) => (
-//         <ListItem key={pokemon.name} pokemon={pokemon} />
-//       ))}
-//     </ul>
+
 
 export default History;

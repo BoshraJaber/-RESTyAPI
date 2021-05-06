@@ -19,35 +19,39 @@ class Form extends React.Component {
     const url = e.target.url.value || 'https://official-joke-api.appspot.com/random_joke';
     const method = e.target.method.value || 'get';
     const body = e.target.body.value;
-    let saveToLocal = {
-      url,
-      method,
-      body,
-    }
-    let isSaved = false;
-    let storedHistory = localStorage.getItem("History") ? JSON.parse(localStorage.getItem("History")) : [];
-    storedHistory.forEach((entry) => {
-      if ((entry.url === saveToLocal.url) && (entry.method === saveToLocal.method)) {
-        isSaved = true
-      }
-    })
-    if (!isSaved) {
-      storedHistory.push(saveToLocal)
-      localStorage.setItem("History", JSON.stringify(storedHistory))
-    } 
     // this.setState({ url, method, isLoading: true });
     // localStorage.setItem("Method History", JSON.stringify(method));
     // localStorage.setItem("URL History", JSON.stringify(url));
     
     // Getting the data from the URL:
     try{
-      const data = await superagent[method](url).send(body)
+      const data = await superagent[method](url).send(body);
       this.setState({ isLoading: false })
       let counter = data.body.count || ' There is no counter ';
-// console.log('Counter', counter)
-let results = [];
+      let results = [];
 results.push(data.headers, data.body)
-    this.props.handler(results, counter)
+   
+      // Saving to local Storage
+      let saveToLocal = {
+        url: url,
+        method: method,
+        body: body,
+        data: data,
+
+      }
+      let isSaved = false;
+      let storedHistory = localStorage.getItem("History") ? JSON.parse(localStorage.getItem("History")) : [];
+      storedHistory.forEach((entry) => {
+        if ((entry.url === saveToLocal.url) && (entry.method === saveToLocal.method)) {
+          isSaved = true
+        }
+      })
+      if (!isSaved) {
+        storedHistory.push(saveToLocal)
+        localStorage.setItem("History", JSON.stringify(storedHistory))
+      } 
+      // 
+      this.props.handler(results, counter)
     }catch(error){
       this.setState({ isLoading: false })
         console.error(error)

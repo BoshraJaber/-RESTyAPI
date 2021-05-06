@@ -12,6 +12,7 @@ an API testing tool that can be run in any browser, allowing a user to easily in
   - To use Sacc for styling: `npm i node-sass`
   - To get the data from the API: `npm i superagent`
   - To use condition: `npm i react-if`
+  - To install react router: `npm i react-router-dom`
 
 ## Testing the app:
 1. Provide the API URL you want to test in the input field.

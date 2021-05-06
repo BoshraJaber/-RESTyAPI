@@ -1,13 +1,14 @@
   
 import { Component } from 'react';
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import './Form.scss';
-import Form from'./Form.js';
 import Header from './Header';
 import Footer from './Footer';
-import Results from './Results';
-import History from './History'
+import Help from './Help';
+import Home from './Home';
+import HistoryPage from './HistoryPage';
 import './Results.scss';
 
 export default class App extends Component {
@@ -20,21 +21,19 @@ export default class App extends Component {
   }
 
   handleForm = (results, Count) => {
-    
-    // let {headers, body} =results;
+ 
     this.setState({ resultsArray: results, Count: Count});
-    // console.log('Hellllllo',results);
-    // console.log('booodyyyyyyyyyyyyyyyyyy',typeof results)
+
   };
   render() {
     return (
       <>
         <Header />
-        <Form  handler={this.handleForm} />
-        <section id="body">
-        <History />
-        <Results  count={this.state.Count} headers={this.state.resultsArray[0]} results={this.state.resultsArray[1]}/>
-        </section>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/history" component={HistoryPage} />
+            <Route exact path="/help" component={Help} />
+          </Switch>
         <Footer />
       </>
     );
