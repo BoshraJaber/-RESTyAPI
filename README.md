@@ -2,7 +2,7 @@
 an API testing tool that can be run in any browser, allowing a user to easily interact with APIs in a familiar interface.
 
 ## LAB - 26: Component Based UI
-* Deployment: [RESTy App]()
+* Deployment: [RESTy App](https://6095f3b13958776d41e2d2e7--restyapp.netlify.app/)
 * Author: Boshra Jaber
 * Setup: 
   - To create a react app: `npx create-react-app app-name`
