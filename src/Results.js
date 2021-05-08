@@ -30,18 +30,6 @@ function Results(props) {
         </div>
         </>
     )
-  }
+}
   
-  export default Results;
-
-
-
-
-
-
-
-
-
-// Renders the count
-// Renders the Result Headers as “pretty” JSON
-// Renders the Result Body as “pretty” JSON
+export default Results;
