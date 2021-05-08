@@ -71,7 +71,7 @@ results.push(data.headers, data.body)
         <div>
         <form onSubmit={this.formSubmit} id="form">
         <input id="url-input" type="text" name="url" placeholder="Enter API URL here!" onChange={this.handleURL} required />
-          <button type="submit"> Go!</button>
+          <button type="submit" id="submitBtn"> Go!</button>
           <br/>
           <div className="radioBtn">
           <input type="radio" id="get" name="method" value="get" defaultChecked />
