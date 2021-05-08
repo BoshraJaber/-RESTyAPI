@@ -68,9 +68,9 @@ results.push(data.headers, data.body)
         </div>
   
       
-        <div id="history">
+        {/* <div id="history">
         <p>{history}: {urlHistory}</p>
-        </div>
+        </div> */}
         
         </main>
       );
