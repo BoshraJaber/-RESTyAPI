@@ -2,7 +2,7 @@
 an API testing tool that can be run in any browser, allowing a user to easily interact with APIs in a familiar interface.
 
 ## LAB - 27: Props and Stats
-* Deployment: [RESTy App](https://60909a8089d28352d9aed64b--resty-boshra.netlify.app/)
+* Deployment: [RESTy App](https://6096186d7bf753989d4bafb3--friendly-albattani-592e0e.netlify.app/)
 * Author: Boshra Jaber
 * Setup: 
   - To create a react app: `npx create-react-app app-name`
