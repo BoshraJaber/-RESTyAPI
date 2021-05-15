@@ -1,14 +1,11 @@
   
 import { Component } from 'react';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import './Form.scss';
 import Header from './Header';
+import Main from './Main';
 import Footer from './Footer';
-import Help from './Help';
-import Home from './Home';
-import HistoryPage from './HistoryPage';
 import './Results.scss';
 
 export default class App extends Component {
@@ -29,11 +26,7 @@ export default class App extends Component {
     return (
       <>
         <Header />
-        <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/history" component={HistoryPage} />
-            <Route exact path="/help" component={Help} />
-          </Switch>
+        <Main />
         <Footer />
       </>
     );

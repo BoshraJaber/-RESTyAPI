@@ -1,10 +1,11 @@
 import React from 'react';
+import './Help.scss'
 
 function Help(){
 return(
     <>
-    <h3>How to use this Application:</h3>
-    <ol>
+    <h3 id="helpHeader">How to use this Application:</h3>
+    <ol id="helpOl">
         <li>Provide the API URL you want to test in the input field.</li>
         <li>Choose the rest method.</li>
         <li>Click on GO! to see the results.</li>
