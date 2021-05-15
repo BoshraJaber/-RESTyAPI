@@ -2,7 +2,9 @@
 an API testing tool that can be run in any browser, allowing a user to easily interact with APIs in a familiar interface.
 
 ## LAB - 27: Props and Stats
-* Deployment: [RESTy App](https://60961ad47bf753a7f84baf02--resty-boshra.netlify.app/) 
+
+* Deployment: [RESTy App](https://60a026f0c1a56f48a475dca7--resty-boshra.netlify.app/) 
+
 * Author: Boshra Jaber
 * Setup: 
   - To create a react app: `npx create-react-app app-name`
@@ -12,6 +14,7 @@ an API testing tool that can be run in any browser, allowing a user to easily in
   - To use Sacc for styling: `npm i node-sass`
   - To get the data from the API: `npm i superagent`
   - To use condition: `npm i react-if`
+  - To install react router: `npm i react-router-dom`
 
 ## Testing the app:
 1. Provide the API URL you want to test in the input field.

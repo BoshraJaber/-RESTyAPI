@@ -1,6 +1,8 @@
 import React from 'react';
+// import { If, Else, Then } from 'react-if';
 
 function handleDisplayForm(e){
+    
     let historyEntry = e.target.innerText;
     // GET: https://official-joke-api.appspot.com/random_joke
 let selectedMethod = historyEntry.split(/:(.+)/)[0].toLowerCase()
@@ -13,7 +15,7 @@ let selectedMethod = historyEntry.split(/:(.+)/)[0].toLowerCase()
     button.click();
 }
 
-function History(){
+function HistorySection(){
     let displayHistory =  localStorage.getItem("History") ? JSON.parse(localStorage.getItem("History")) : [];
    return(
 <>
@@ -31,11 +33,6 @@ displayHistory.map(entry =>{
 </section>
 </>
 )}
-// return (
-//     <ul>
-//       {pokemons.map((pokemon) => (
-//         <ListItem key={pokemon.name} pokemon={pokemon} />
-//       ))}
-//     </ul>
 
-export default History;
+
+export default HistorySection;

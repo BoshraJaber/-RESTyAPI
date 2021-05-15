@@ -3,11 +3,9 @@ import { Component } from 'react';
 import React from 'react';
 import './App.scss';
 import './Form.scss';
-import Form from'./Form.js';
 import Header from './Header';
+import Main from './Main';
 import Footer from './Footer';
-import Results from './Results';
-import History from './History'
 import './Results.scss';
 
 export default class App extends Component {
@@ -20,21 +18,15 @@ export default class App extends Component {
   }
 
   handleForm = (results, Count) => {
-    
-    // let {headers, body} =results;
+ 
     this.setState({ resultsArray: results, Count: Count});
-    // console.log('Hellllllo',results);
-    // console.log('booodyyyyyyyyyyyyyyyyyy',typeof results)
+
   };
   render() {
     return (
       <>
         <Header />
-        <Form  handler={this.handleForm} />
-        <section id="body">
-        <History />
-        <Results  count={this.state.Count} headers={this.state.resultsArray[0]} results={this.state.resultsArray[1]}/>
-        </section>
+        <Main />
         <Footer />
       </>
     );
