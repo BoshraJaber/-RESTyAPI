@@ -15,7 +15,7 @@ function handleDisplayDetails(e) {
 
   render(
     <>
-      <If condition={e.view.location.pathname == "/history"}>
+      <If condition={e.view.location.pathname === "/history"}>
         <Then>
           <div id="detailedHistory">
             <p>Method: {selectedMethod.toUpperCase()}</p>
@@ -63,7 +63,7 @@ function History1(props) {
     <>
       <section id="history2">
         <h3>History:</h3>
-        <If condition={props.location.pathname == "/history"}>
+        <If condition={props.location.pathname === "/history"}>
           <Then>
             {displayHistory.map((entry, idx) => {
               return (
